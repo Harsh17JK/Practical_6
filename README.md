@@ -1,8 +1,6 @@
-'''Experiment No. 6: Write a Python program to store first-year percentage of students
-in an array. Write a function for sorting an array of floating-point numbers in
-ascending order using quick sort and display the top five scores.
-'''
+Here's the Python program to accept the first-year percentage of students, sort the percentages using quicksort, and display the top five scores without using NumPy:
 
+```python
 # Function for accepting the percentage of the Students
 def input_percentage():
     perc = []
@@ -51,10 +49,11 @@ def display_top_five(perc):
     for i in range(start, stop, -1):
         print(perc[i], sep="\n")
 
-# Main
+# Main Program
 unsorted_percentage = []
 sorted_percentage = []
 flag = 1
+
 while flag == 1:
     print("\n--------------------MENU--------------------")
     print("1. Accept the Percentage of Students")
@@ -62,6 +61,7 @@ while flag == 1:
     print("3. Perform Quick Sort on the Data")
     print("4. Exit")
     ch = int(input("Enter your choice (from 1 to 4): "))
+
     if ch == 1:
         unsorted_percentage = input_percentage()
     elif ch == 2:
@@ -78,3 +78,13 @@ while flag == 1:
         flag = 0
     else:
         print("Invalid Choice!!")
+```
+
+### Explanation:
+1. **`input_percentage()`**: Accepts the percentages of students and stores them in a list.
+2. **`print_percentage()`**: Displays the percentages stored in the list.
+3. **`percentage_partition()`**: A helper function for partitioning the list during the quick sort.
+4. **`Quick_Sort()`**: Implements the Quick Sort algorithm to sort the percentages in ascending order.
+5. **`display_top_five()`**: Displays the top 5 percentages from the sorted list. If there are fewer than 5 students, it shows as many as available.
+6. **Menu-driven interface**: Users can accept student percentages, view them, sort them, and view the top 5 sorted percentages.
+
